@@ -1,0 +1,144 @@
+:root {
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --primary-600: #0080ff;
+  --border: #e5e7eb;
+  --ring: rgba(41, 138, 41, 0.35);
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue",
+               Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 780px;
+  margin: 100px auto;
+  padding: 0 25px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--primary-600);
+}
+
+fieldset,
+.card-table {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.spacer { height: 16px; }
+.field { margin: 12px 0; }
+.gap { display: inline-block; width: 16px; }
+
+label { font-weight: 600; }
+
+label.inline {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.5s ease, box-shadow 0.15s ease;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+  margin: 0 6px 0 0;
+}
+
+.card-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  padding: 0;             
+}
+
+.card-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding: 14px 16px;
+  color: var(--primary);
+}
+
+.card-table td {
+  padding: 14px 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.card-table tr:first-child td {
+  border-top: none;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input[type="submit"] {
+  appearance: none;
+  border: 0;
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.06s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(1.03);
+  box-shadow: 0 10px 26px rgba(37, 99, 235, 0.18);
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 24px; }
+  fieldset, .card-table { padding: 12px; }
+  .card-table td { padding: 12px; }
+}
